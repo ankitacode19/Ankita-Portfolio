@@ -6,6 +6,7 @@ import componentTagger from 'vite-plugin-component-tagger';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/Ankita-Portfolio/",
   server: {
     host: "::",
     port: 8080,
