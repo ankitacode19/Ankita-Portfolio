@@ -6,7 +6,7 @@ import componentTagger from 'vite-plugin-component-tagger';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/Ankita-Portfolio/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
@@ -22,6 +22,6 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: 'build',
+    outDir: 'dist',
   },
 }));
