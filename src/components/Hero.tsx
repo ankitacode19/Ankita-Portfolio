@@ -27,10 +27,10 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            John Developer
+            Ankita Yadav
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8 font-light">
-            Full Stack Developer & UI/UX Designer
+            Full Stack Developer
           </h2>
           <p className="text-lg md:text-xl text-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
             Crafting digital experiences that blend innovative technology with beautiful design. 
@@ -39,23 +39,35 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg">
+            <Button
+  onClick={() => {
+    const section = document.getElementById("projects");
+    section?.scrollIntoView({ behavior: "smooth" });
+  }}
+  size="lg"
+  className="bg-gradient-primary hover:shadow-glow transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg"
+>
               View My Work
             </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg">
+            <Button 
+            onClick={() => {
+    const section = document.getElementById("contact");
+    section?.scrollIntoView({ behavior: "smooth" });
+  }} 
+  variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-primary-foreground px-8 py-4 text-lg">
               Get In Touch
             </Button>
           </div>
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-16">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 transform hover:scale-110">
+            <a href="https://github.com/ankitacode19" className="text-muted-foreground hover:text-primary transition-colors duration-300 transform hover:scale-110">
               <Github size={24} />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 transform hover:scale-110">
+            <a href="https://www.linkedin.com/in/ankita-vikas-yadav/" className="text-muted-foreground hover:text-primary transition-colors duration-300 transform hover:scale-110">
               <Linkedin size={24} />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 transform hover:scale-110">
+            <a href="mailto:ankitayadav019012@gmail.com" className="text-muted-foreground hover:text-primary transition-colors duration-300 transform hover:scale-110">
               <Mail size={24} />
             </a>
           </div>

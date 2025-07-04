@@ -4,39 +4,39 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and Stripe integration. Features include real-time inventory management, advanced search, and mobile-responsive design.",
+      title: "Fake News Detection",
+      description: "A full-stack machine learning–powered web application built with Flask,and Scikit-learn. Features include real-time news article analysis, confidence scoring using NLP models, and a clean, mobile-responsive UI. Integrates with external news APIs and provides insightful visualizations of prediction results.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
-      github: "#",
-      live: "#",
-      featured: true
-    },
-    {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features. Built with modern React and real-time WebSocket connections.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tech: ["React", "TypeScript", "Socket.io", "Express", "PostgreSQL"],
-      github: "#",
-      live: "#",
-      featured: true
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Data visualization dashboard for business intelligence with interactive charts, real-time data processing, and customizable reporting features.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      tech: ["Vue.js", "D3.js", "Python", "FastAPI", "Redis"],
-      github: "#",
-      live: "#",
+      tech: ["HTML", "CSS", "JavaScript", "Flask", "Scikit-learn"],
+      github: "https://github.com/ankitacode19/fake-news-detection",
       featured: false
     },
     {
-      title: "Mobile Banking App",
-      description: "Secure mobile banking application with biometric authentication, transaction history, and real-time notifications. Built with React Native for cross-platform compatibility.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
-      tech: ["React Native", "Node.js", "JWT", "MongoDB", "Expo"],
-      github: "#",
-      live: "#",
+      title: "snakeNsnack",
+      description: "A clean and responsive Android remake of the classic Snake game, built using Java and managed with Gradle (Kotlin DSL). Features include smooth touch controls, score tracking, and a minimalist UI designed for modern devices. Optimized for performance, the app delivers an engaging gameplay experience with a nostalgic vibe.",
+      tech: ["Android", "Java", "Gradle"],
+      github: "https://github.com/ankitacode19/snakeNsnack",
+      featured: false
+    },
+    {
+      title: "Bing Auto Search",
+      description: "A lightweight browser extension designed to automate Bing searches and help users effortlessly earn Microsoft Rewards. Built with JavaScript, HTML, and Manifest v3, the extension runs scheduled queries in the background, mimicking natural user behavior.",
+      tech: ["Javascript", "HTML", "CSS", "Manifest V3"],
+      github: "https://github.com/ankitacode19/Bing-Auto-Search",
+      featured: false
+    },
+    {
+      title: "E-Commerce Platform",
+      description: "A dynamic e-commerce site built with Django, featuring secure user authentication, real-time cart management, and responsive design. The platform supports product listings and order handling with a clean UI styled using CSS and enhanced by JavaScript for smooth user experience.",
+      tech: ["Django", "HTML", "CSS", "Javascript"],
+      github: "https://github.com/ankitacode19/E-Commerce-and-Blog-Website-DJANGO",
+      featured: false
+    },
+    {
+      title: "Discord ModMail",
+      description: "A custom Discord moderation bot built with Node.js and discord.js, hosted on Replit. Designed to handle user DMs and forward them to a staff channel as modmail tickets, this bot supports full intent handling, message parsing, and reply routing. Built with Express to keep it running and integrated smart handling of mentions, caching, and reactions to streamline moderation.",
+      tech: ["Node.js", "Discord.js", "JSON"],
+      github: "https://replit.com/@ankitacode19/Modmail-Bot",
       featured: false
     }
   ];
@@ -54,51 +54,26 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid gap-8">
+        <div className="grid gap-8 md:grid-cols-2 place-items-center">
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className={`group relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-card hover:shadow-glow transition-all duration-500 ${
+              className={`group relative overflow-hidden max-w-xl w-full  rounded-xl border border-border/50 bg-card shadow-card hover:shadow-glow transition-all duration-500 ${
                 project.featured 
-                  ? 'lg:grid lg:grid-cols-2 lg:gap-8' 
+                  ? 'sm:grid lg:grid-cols-1 lg:gap-8' 
                   : 'max-w-2xl mx-auto'
               }`}
             >
-              {/* Project Image */}
-              <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-64 lg:h-80 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Project Links Overlay */}
-                <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a 
-                    href={project.github}
-                    className="p-2 bg-background/80 rounded-lg hover:bg-background transition-colors"
-                  >
-                    <Github size={20} className="text-foreground" />
-                  </a>
-                  <a 
-                    href={project.live}
-                    className="p-2 bg-background/80 rounded-lg hover:bg-background transition-colors"
-                  >
-                    <ExternalLink size={20} className="text-foreground" />
-                  </a>
-                </div>
-              </div>
-
+            
               {/* Project Content */}
               <div className="p-6 lg:p-8 flex flex-col justify-center">
                 <div className="mb-4">
                   {project.featured && (
-                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
+                    <span className="inline-block px-3 py-1 bg-primary-glow/10 text-primary text-sm font-medium rounded-full mb-3">
                       Featured Project
                     </span>
                   )}
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary-glow transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">
@@ -120,21 +95,16 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-4">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
                   <Button 
                     variant="outline" 
                     size="sm"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    className="border-primary-glow text-primary-glow hover:bg-primary-glow hover:text-primary-foreground"
                   >
                     <Github size={16} className="mr-2" />
                     Code
                   </Button>
-                  <Button 
-                    size="sm"
-                    className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
-                  >
-                    <ExternalLink size={16} className="mr-2" />
-                    Live Demo
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -143,6 +113,7 @@ const Projects = () => {
 
         {/* View More Projects */}
         <div className="text-center mt-16">
+        <a href="https://github.com/ankitacode19?tab=repositories" target="_blank" rel="noopener noreferrer">  
           <Button 
             variant="outline" 
             size="lg"
@@ -151,6 +122,7 @@ const Projects = () => {
             View All Projects
             <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
+          </a>
         </div>
       </div>
     </section>

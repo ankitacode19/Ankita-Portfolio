@@ -9,7 +9,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate developer with 5+ years of experience creating digital solutions 
+            Passionate developer about creating digital solutions 
             that combine technical excellence with stunning visual design.
           </p>
         </div>
@@ -24,26 +24,11 @@ const About = () => {
               and creative aspects of web development.
             </p>
             <p className="text-lg leading-relaxed text-foreground/90">
-              When I'm not coding, you'll find me exploring the latest design trends, 
-              contributing to open-source projects, or mentoring fellow developers. 
+              When I'm not coding, you'll find me exploring the latest design trends. 
               I'm always excited about new challenges and opportunities to learn.
             </p>
             
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                <div className="text-sm text-muted-foreground">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">5+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">20+</div>
-                <div className="text-sm text-muted-foreground">Happy Clients</div>
-              </div>
-            </div>
+            
           </div>
 
           {/* Right Column - Features */}

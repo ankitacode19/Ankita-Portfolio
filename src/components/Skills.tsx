@@ -16,37 +16,37 @@ const Skills = () => {
     {
       title: "Frontend",
       icon: Globe,
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"],
+      skills: ["React", "TypeScript", "HTML", "Tailwind CSS", "SCSS"],
       color: "text-primary"
     },
     {
       title: "Backend",
       icon: Server,
-      skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"],
+      skills: ["Node.js", "Python", "MySQL", "Django", "REST APIs"],
       color: "text-accent"
     },
     {
       title: "Mobile",
       icon: Smartphone,
-      skills: ["React Native", "Flutter", "iOS", "Android", "Progressive Web Apps"],
+      skills: ["React Native", "Java", "Android"],
       color: "text-primary-glow"
     },
     {
       title: "DevOps",
       icon: Cloud,
-      skills: ["Docker", "AWS", "CI/CD", "Kubernetes", "Linux"],
+      skills: ["AWS", "CI/CD", "Linux"],
       color: "text-primary"
     },
     {
       title: "Design",
       icon: Palette,
-      skills: ["Figma", "Adobe XD", "UI/UX", "Prototyping", "Design Systems"],
+      skills: ["Figma", "UI/UX", "AutoCAD"],
       color: "text-accent"
     },
     {
       title: "Tools",
       icon: GitBranch,
-      skills: ["Git", "VS Code", "Webpack", "Jest", "Postman"],
+      skills: ["Git", "VS Code", "Replit",],
       color: "text-primary-glow"
     }
   ];
@@ -109,8 +109,8 @@ const Skills = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-8 opacity-60">
             {[
-              "React", "TypeScript", "Node.js", "Python", "AWS", "Docker", 
-              "PostgreSQL", "MongoDB", "Git", "Figma"
+              "React", "Django", "TypeScript", "Node.js", "Python", "Bootstrap", 
+              "MySQL", "HTML", "Git", "Figma"
             ].map((tech) => (
               <div 
                 key={tech}
